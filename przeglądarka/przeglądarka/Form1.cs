@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,18 +48,13 @@ namespace przeglądarka
                 button1_Click(null, null);
             }
         }
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)ConsoleKey.Enter)
-            {
 
-                button11_Click(null, null);
-            }
-        }
+
+
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-
             button1.Enabled = true;
+            button11.Enabled = true;
             textBox1.Enabled = true;
             textBox2.Enabled = true;
             toolStripStatusLabel1.Text = "Wczytano";
@@ -126,6 +121,7 @@ namespace przeglądarka
         {
             webBrowser1.Navigate("https://google.pl/#q=" + textBox2.Text);
             webBrowser1.Show();
+            textBox2.Text = null;
         }
     }
 }
