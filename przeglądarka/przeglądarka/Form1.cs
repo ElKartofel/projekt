@@ -75,6 +75,7 @@ namespace przeglądarka
         {
             if (e.CurrentProgress > 0 && e.MaximumProgress > 0)
             {
+                toolStripStatusLabel1.Text = "Wczytywanie";
                 int percentage = (int)(e.CurrentProgress * 100 / e.MaximumProgress);
 
                 if (percentage <= 100)
