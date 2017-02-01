@@ -84,6 +84,7 @@ namespace przeglądarka
             }
             else
             {
+                toolStripStatusLabel1.Text = "Wczytano";
                 toolStripProgressBar1.ProgressBar.Value = 0;
             }
         }
