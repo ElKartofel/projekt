@@ -71,10 +71,19 @@ namespace przeglądarka
         {
             if (e.CurrentProgress > 0 && e.MaximumProgress > 0)
             {
+                int percentage = (int)(e.CurrentProgress * 100 / e.MaximumProgress);
 
-                toolStripProgressBar1.ProgressBar.Value = (int)(e.CurrentProgress * 100 / e.MaximumProgress);
+                if (percentage <= 100)
+                {
+                    toolStripProgressBar1.ProgressBar.Value = percentage;
+                }
+            }
+            else
+            {
+                toolStripProgressBar1.ProgressBar.Value = 0;
             }
         }
+
         private void wyjdźToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
