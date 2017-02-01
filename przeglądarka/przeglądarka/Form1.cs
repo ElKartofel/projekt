@@ -38,7 +38,6 @@ namespace przeglądarka
         }
         private void Nawigacja()
         {
-            toolStripStatusLabel1.Text = "Wczytywanie";
             webBrowser1.Navigate(textBox1.Text);
             webBrowser1.Show();
         }
@@ -67,7 +66,6 @@ namespace przeglądarka
             button11.Enabled = true;
             textBox1.Enabled = true;
             textBox2.Enabled = true;
-            toolStripStatusLabel1.Text = "Wczytano";
             toolStripProgressBar1.ProgressBar.Value = 100;
         }
         
