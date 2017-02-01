@@ -22,10 +22,12 @@ namespace przeglądarka
             webBrowser1.ScriptErrorsSuppressed = true;
             webBrowser1.Hide();
         }
+        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
+        
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -40,6 +42,7 @@ namespace przeglądarka
             webBrowser1.Navigate(textBox1.Text);
             webBrowser1.Show();
         }
+        
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)ConsoleKey.Enter)
@@ -67,6 +70,7 @@ namespace przeglądarka
             toolStripStatusLabel1.Text = "Wczytano";
             toolStripProgressBar1.ProgressBar.Value = 100;
         }
+        
         private void webBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
         {
             if (e.CurrentProgress > 0 && e.MaximumProgress > 0)
@@ -88,6 +92,7 @@ namespace przeglądarka
         {
             Application.Exit();
         }
+        
         private void button1_Click(object sender, EventArgs e)
         {
             Nawigacja();
@@ -97,42 +102,51 @@ namespace przeglądarka
         {
             webBrowser1.GoBack();
         }
+        
         private void button3_Click(object sender, EventArgs e)
         {
             webBrowser1.GoForward();
         }
+        
         private void button4_Click(object sender, EventArgs e)
         {
             webBrowser1.Refresh();
         }
+        
         private void button5_Click(object sender, EventArgs e)
         {
             webBrowser1.Stop();
         }
+        
         private void button6_Click(object sender, EventArgs e)
         {
             textBox1.Text = "http://www.google.com";
             Nawigacja();
         }
+        
         private void button7_Click(object sender, EventArgs e)
         {
             textBox1.Text = "http://www.wemif.net";
             Nawigacja();
         }
+        
         private void button8_Click(object sender, EventArgs e)
         {
             textBox1.Text = "http://www.onet.pl";
             Nawigacja();
         }
+        
         private void button9_Click(object sender, EventArgs e)
         {
             textBox1.Text = "http://www.wroclaw.pl/rozklady-jazdy";
             Nawigacja();
         }
+        
         private void button10_Click(object sender, EventArgs e)
         {
             webBrowser1.Hide();
         }
+        
         private void button11_Click(object sender, EventArgs e)
         {
             webBrowser1.Navigate("https://google.pl/#q=" + textBox2.Text);
